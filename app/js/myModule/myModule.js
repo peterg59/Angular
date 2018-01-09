@@ -1,4 +1,4 @@
-var myModule = angular.module('myModule',['ngRoute']).config(function($routeProvider) {
+angular.module('myModule',['ngRoute']).config(function($routeProvider) {
     $routeProvider
     .when('/people', {
     	templateUrl : '../../people.html',
