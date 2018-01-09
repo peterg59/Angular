@@ -1,0 +1,10 @@
+<label>Name:</label> 
+<input ng-model = "recherche.name">
+<ul>
+	<li ng-repeat="personne in list | filter:recherche">
+		<span ng-bind = "personne.id"></span>
+		<span ng-bind = "personne.name"></span>
+		<span ng-bind = "personne.height"></span>
+		<a href ="#!/people/{{personne.id}}">OUVRIR</a>
+	</li>
+</ul>
