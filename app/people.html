@@ -1,5 +1,6 @@
 <label>Name:</label> 
 <input ng-model = "recherche.name">
+<input ng-model="search.text"/>
 <ul>
 	<li ng-repeat="personne in list | filter:recherche">
 		<span ng-bind = "personne.id"></span>

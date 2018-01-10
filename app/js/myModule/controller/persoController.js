@@ -1,7 +1,8 @@
-angular.module('myModule').controller('persoController', function($scope, $http, $routeParams){
+angular.module('myModule').controller('persoController', function($scope, $routeParams, StarwarsService){
 	$scope.perso = undefined;
 	var id = $routeParams.id;
-	$http.get('https://swapi.co/api/people/'+id).then(function(response){
-		$scope.perso = response.data;
+	
+	StarwarsService.getOne(id).then(function(data){
+		$scope.perso = data;
 	});
 });
