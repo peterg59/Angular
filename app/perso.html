@@ -1,5 +1,8 @@
 <a href = "#!/people">REVENIR LISTE</a>
-
+Genre:
+	<span ng-show="perso.gender=='male'">M</span>
+	<span ng-show="perso.gender=='female'">F</span>
+	<span ng-show="perso.gender=='n/a'">Autre</span>
 <ul>
 	<li><span ng-bind="perso.name"></span></li>
 	<li><span ng-bind="perso.height"></span></li>

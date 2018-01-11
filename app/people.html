@@ -1,11 +1,22 @@
 <label>Name:</label> 
 <input ng-model = "recherche.name">
-<input ng-model="search.text"/>
+<input ng-model = "search.text"/>
 <ul>
 	<li ng-repeat="personne in list | filter:recherche">
 		<span ng-bind = "personne.id"></span>
 		<span ng-bind = "personne.name"></span>
 		<span ng-bind = "personne.height"></span>
+		<span star-directive = "personne"></span>
 		<a href ="#!/people/{{personne.id}}">OUVRIR</a>
 	</li>
 </ul>
+
+Click me: <input type="checkbox" ng-model="checked">
+<br/>
+ngShow:
+<span ng-show="checked">
+Affiché quand la checkbox est cochée.
+</span> <br/>
+ngHide:
+<span ng-hide="checked">
+Masqué
